@@ -20,11 +20,23 @@ body {
 
 ul {
   background-color: $black;
+  border: 8px solid $black;
   border-radius: 4px;
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
+  display: inline-block;
+  list-style: none;
   margin: 0;
   padding: 8px;
+  position: relative;
+
+  &.level-3 {
+    height: 200px;
+    width: 200px;
+  }
+
+  &.level-4 {
+    height: 272px;
+    width: 272px;
+  }
 
   li {
     background: $white;
@@ -39,6 +51,10 @@ ul {
     border-left: $border-top-left;
     border-right: $border-bottom-right;
     border-bottom: $border-bottom-right;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s linear;
   }
 }
 
