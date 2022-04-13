@@ -1,15 +1,26 @@
+$white: #FFFFFF;
+$black: #000000;
+$purple: #B300FF;
+$cyan: #6FECED;
+$yellow: #E4ED6F;
+$red: #ED6F85;
+
 html, body {
     position: relative;
     height: 100%;
 }
 
 body {
-    background: #eee;
+    background: $white;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 16px;
-    color: #000;
+    color: $black;
     margin: 0;
     padding: 0;
+}
+
+@mixin background-gradient($color1, $color2, $angle) {
+    background: linear-gradient($angle, $color1 0%, $color2 100%);
 }
 
 .swiper {
@@ -18,16 +29,75 @@ body {
 }
 
 .swiper-slide {
-    background-color: #FFFFFF;
+    background-color: $white;
 
     > div {
-        height: 50vh;
+        height: 50%;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
+    > .header {
+        > .page {
+            border-radius: 50%;
+            color: $white;
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 72px;
+            width: 72px;
+        }
+
+        > .title {
+            font-size: 6em;
+            font-weight: 900;
+            margin: 1rem 0;
+        }
+
+        > .subtitle {
+            color: gray;
+            font-size: 3em;
+            margin: 0;
+        }
+    }
+
+    &.blue {
+        > .header > .page {
+            @include background-gradient($purple, $cyan, 45deg);
+        }
+
+        > .footer {
+            @include background-gradient($purple, $cyan, 90deg);
+        }
+    }
+
+    &.green {
+        > .header > .page {
+            @include background-gradient($cyan, $yellow, 45deg);
+        }
+
+        > .footer {
+            @include background-gradient($cyan, $yellow, 90deg);
+        }
+    }
+
+    &.red {
+        > .header > .page {
+            @include background-gradient($yellow, $red, 45deg);
+        }
+
+        > .footer {
+            @include background-gradient($yellow, $red, 90deg);
+        }
+    }
+}
+
+.swiper-button-prev, .swiper-button-next {
+    top: 25%;
 }
 
 @media (hover: none) {
