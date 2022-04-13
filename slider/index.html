@@ -1,7 +1,58 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+		<link rel="stylesheet" href="./style.css" />
+
 		<title>Slider test</title>
 	</head>
-	<body></body>
+	<body>
+	<!-- Swiper -->
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide blue">
+				<div class="header">
+					<div class="page">1</div>
+					<h1 class="title">Gradients</h1>
+					<p class="subtitle">Start, end, angle</p>
+				</div>
+				<div class="footer"></div>
+			</div>
+			<div class="swiper-slide green">
+				<div class="header">
+					<div class="page">2</div>
+					<h1 class="title">Presets</h1>
+					<p class="subtitle">Manage presets</p>
+				</div>
+				<div class="footer"></div>
+			</div>
+			<div class="swiper-slide red">
+				<div class="header">
+					<div class="page">3</div>
+					<h1 class="title">Colors</h1>
+					<p class="subtitle">Pick any color</p>
+				</div>
+				<div class="footer"></div>
+			</div>
+		</div>
+
+		<!-- Navigation Arrows -->
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+	</div>
+
+	<!-- Swiper JS -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper(".swiper", {
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+	</script>
+	</body>
 </html>
