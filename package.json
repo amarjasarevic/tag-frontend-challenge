@@ -5,7 +5,8 @@
     "eslint-plugin-import": "^2.26.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.3.7",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "sass": "^1.50.0"
   },
   "name": "tag-frontend-challenge",
   "description": "These tests will be used to evaluate your skillset and the type of tasks/projects you'd be great for. We encourage you to do both tests. They are different in nature and evaluate different skills. Start with one that better demonstrates your craft.",
@@ -16,7 +17,8 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "sass:watch": "sass --watch ."
   },
   "repository": {
     "type": "git",
