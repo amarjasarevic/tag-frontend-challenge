@@ -1,0 +1,26 @@
+{
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  },
+  "name": "tag-frontend-challenge",
+  "description": "These tests will be used to evaluate your skillset and the type of tasks/projects you'd be great for. We encourage you to do both tests. They are different in nature and evaluate different skills. Start with one that better demonstrates your craft.",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "dependencies": {},
+  "scripts": {
+    "lint": "eslint .",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amarjasarevic/tag-frontend-challenge.git"
+  },
+  "author": "amar.jasarevic@toptal.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amarjasarevic/tag-frontend-challenge/issues"
+  },
+  "homepage": "https://github.com/amarjasarevic/tag-frontend-challenge#readme"
+}
