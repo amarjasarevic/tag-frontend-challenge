@@ -1,107 +1,110 @@
-$white: #FFFFFF;
+$white: #ffffff;
 $black: #000000;
-$purple: #B300FF;
-$cyan: #6FECED;
-$yellow: #E4ED6F;
-$red: #ED6F85;
+$purple: #b300ff;
+$cyan: #6feced;
+$yellow: #e4ed6f;
+$red: #ed6f85;
 
-html, body {
-    position: relative;
-    height: 100%;
+html,
+body {
+  position: relative;
+  height: 100%;
 }
 
 body {
-    background: $white;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    color: $black;
-    margin: 0;
-    padding: 0;
+  background: $white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: $black;
+  margin: 0;
+  padding: 0;
 }
 
 @mixin background-gradient($color1, $color2, $angle) {
-    background: linear-gradient($angle, $color1 0%, $color2 100%);
+  background: linear-gradient($angle, $color1 0%, $color2 100%);
 }
 
 .swiper {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
-    background-color: $white;
+  background-color: $white;
 
-    > div {
-        height: 50%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+  > div {
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  > .header {
+    > .page {
+      border-radius: 50%;
+      color: $white;
+      font-size: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 72px;
+      width: 72px;
     }
 
-    > .header {
-        > .page {
-            border-radius: 50%;
-            color: $white;
-            font-size: 2em;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 72px;
-            width: 72px;
-        }
-
-        > .title {
-            font-size: 6em;
-            font-weight: 900;
-            margin: 1rem 0;
-        }
-
-        > .subtitle {
-            color: gray;
-            font-size: 3em;
-            margin: 0;
-        }
+    > .title {
+      font-size: 6em;
+      font-weight: 900;
+      margin: 1rem 0;
     }
 
-    &.blue {
-        > .header > .page {
-            @include background-gradient($purple, $cyan, 45deg);
-        }
+    > .subtitle {
+      color: gray;
+      font-size: 3em;
+      margin: 0;
+    }
+  }
 
-        > .footer {
-            @include background-gradient($purple, $cyan, 90deg);
-        }
+  &.blue {
+    > .header > .page {
+      @include background-gradient($purple, $cyan, 45deg);
     }
 
-    &.green {
-        > .header > .page {
-            @include background-gradient($cyan, $yellow, 45deg);
-        }
+    > .footer {
+      @include background-gradient($purple, $cyan, 90deg);
+    }
+  }
 
-        > .footer {
-            @include background-gradient($cyan, $yellow, 90deg);
-        }
+  &.green {
+    > .header > .page {
+      @include background-gradient($cyan, $yellow, 45deg);
     }
 
-    &.red {
-        > .header > .page {
-            @include background-gradient($yellow, $red, 45deg);
-        }
-
-        > .footer {
-            @include background-gradient($yellow, $red, 90deg);
-        }
+    > .footer {
+      @include background-gradient($cyan, $yellow, 90deg);
     }
+  }
+
+  &.red {
+    > .header > .page {
+      @include background-gradient($yellow, $red, 45deg);
+    }
+
+    > .footer {
+      @include background-gradient($yellow, $red, 90deg);
+    }
+  }
 }
 
-.swiper-button-prev, .swiper-button-next {
-    top: 25%;
+.swiper-button-prev,
+.swiper-button-next {
+  top: 25%;
 }
 
 @media (hover: none) {
-    .swiper-button-prev, .swiper-button-next {
-        display: none;
-    }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
 }

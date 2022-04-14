@@ -1,10 +1,11 @@
-html, body {
+html,
+body {
   position: relative;
   height: 100%;
 }
 
 body {
-  background: #FFFFFF;
+  background: #ffffff;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #000000;
@@ -31,7 +32,7 @@ ul.level-4 {
   width: 272px;
 }
 ul li {
-  background: #FFFFFF;
+  background: #ffffff;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;

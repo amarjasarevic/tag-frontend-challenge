@@ -5,7 +5,9 @@
   const DATA_Y = 'data-position-y';
 
   const hasElementAtPosition = (x, y) => {
-    const nodes = document.querySelectorAll(`[${DATA_X}="${x}"][${DATA_Y}="${y}"]`);
+    const nodes = document.querySelectorAll(
+      `[${DATA_X}="${x}"][${DATA_Y}="${y}"]`,
+    );
     return nodes.length > 0;
   };
 
@@ -41,13 +43,18 @@
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
 
-      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
     }
   };
 
   const getRandomArray = (maxElements) => {
     const array = [];
-    for (let i = 0; i <= maxElements; i += 1) { array.push(i); }
+    for (let i = 0; i <= maxElements; i += 1) {
+      array.push(i);
+    }
 
     shuffleArray(array);
 
@@ -78,7 +85,9 @@
     const { x, y } = getPositionFromElement(element);
     const size = element.offsetHeight;
 
-    element.style.transform = `translateX(${x * size}px) translateY(${y * size}px)`;
+    element.style.transform = `translateX(${x * size}px) translateY(${
+      y * size
+    }px)`;
   };
 
   const updateUI = (tiles) => {

@@ -1,10 +1,11 @@
-html, body {
+html,
+body {
   position: relative;
   height: 100%;
 }
 
 body {
-  background: #FFFFFF;
+  background: #ffffff;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #000000;
@@ -18,7 +19,7 @@ body {
 }
 
 .swiper-slide {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .swiper-slide > div {
   height: 50%;
@@ -30,7 +31,7 @@ body {
 }
 .swiper-slide > .header > .page {
   border-radius: 50%;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 2em;
   display: flex;
   justify-content: center;
@@ -49,30 +50,32 @@ body {
   margin: 0;
 }
 .swiper-slide.blue > .header > .page {
-  background: linear-gradient(45deg, #B300FF 0%, #6FECED 100%);
+  background: linear-gradient(45deg, #b300ff 0%, #6feced 100%);
 }
 .swiper-slide.blue > .footer {
-  background: linear-gradient(90deg, #B300FF 0%, #6FECED 100%);
+  background: linear-gradient(90deg, #b300ff 0%, #6feced 100%);
 }
 .swiper-slide.green > .header > .page {
-  background: linear-gradient(45deg, #6FECED 0%, #E4ED6F 100%);
+  background: linear-gradient(45deg, #6feced 0%, #e4ed6f 100%);
 }
 .swiper-slide.green > .footer {
-  background: linear-gradient(90deg, #6FECED 0%, #E4ED6F 100%);
+  background: linear-gradient(90deg, #6feced 0%, #e4ed6f 100%);
 }
 .swiper-slide.red > .header > .page {
-  background: linear-gradient(45deg, #E4ED6F 0%, #ED6F85 100%);
+  background: linear-gradient(45deg, #e4ed6f 0%, #ed6f85 100%);
 }
 .swiper-slide.red > .footer {
-  background: linear-gradient(90deg, #E4ED6F 0%, #ED6F85 100%);
+  background: linear-gradient(90deg, #e4ed6f 0%, #ed6f85 100%);
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   top: 25%;
 }
 
 @media (hover: none) {
-  .swiper-button-prev, .swiper-button-next {
+  .swiper-button-prev,
+.swiper-button-next {
     display: none;
   }
 }
