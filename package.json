@@ -2,16 +2,18 @@
   "devDependencies": {
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.6.2"
   },
   "name": "tag-frontend-challenge",
   "description": "These tests will be used to evaluate your skillset and the type of tasks/projects you'd be great for. We encourage you to do both tests. They are different in nature and evaluate different skills. Start with one that better demonstrates your craft.",
   "version": "1.0.0",
   "main": ".eslintrc.js",
-  "dependencies": {},
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "test": "test"
   },
   "repository": {
